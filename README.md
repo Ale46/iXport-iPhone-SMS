@@ -3,9 +3,9 @@ Simple tool to export sms and iPhone conversations. You can backup using a store
 
 ## Export to file
 You can choose 3 different method to export your conversation
- **TXT**: very basic export method. A simple text file.
- **CSV**: comma-separated values export method. If you need to easily manage you conversation this is the right choice.
- **HTML**: html based page. The best solution for who love the design things, very similiar to the native iPhone sms conversation style.
+* **TXT**: very basic export method. A simple text file.
+* **CSV**: comma-separated values export method. If you need to easily manage you conversation this is the right choice.
+* **HTML**: html based page. The best solution for who love the design things, very similiar to the native iPhone sms conversation style.
 	
 
 ## Compatibility and Requisites
