@@ -331,24 +331,24 @@ Full-Width Styles
   background: url('../images/icon_download.png') no-repeat 0% 90%;
 }
 
-.zip_download_link {
+.zip_download_link_all {
   display: block;
   float: right;
   width: 90px;
   height:70px;
   text-indent: -5000px;
   overflow: hidden;
-  background: url(../images/sprite_download.png) no-repeat bottom left;
+  background: url('http://wizfolio.com/Images1/multiOS.png?ver=2.0.0.20110201000005') no-repeat bottom left;
 }
 
-.tar_download_link {
+.zip_download_link_win {
   display: block;
   float: right;
   width: 90px;
   height:70px;
   text-indent: -5000px;
   overflow: hidden;
-  background: url(../images/sprite_download.png) no-repeat bottom right;
+  background: url('http://wizfolio.com/Images1/multiOS.png?ver=2.0.0.20110201000005') no-repeat bottom right;
   margin-left: 10px;
 }
 
