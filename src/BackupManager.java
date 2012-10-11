@@ -16,7 +16,7 @@ public class BackupManager {
 	public BackupManager(){
 		String OS = System.getProperty("os.name");
 		String HOME = (System.getProperty("user.home"));
-		if (OS.contains("Windows 7")) {
+		if (OS.contains("Windows 7")||OS.contains("Windows 8")) {
 			BACKUP_DIR = HOME+SEVEN_DIR;
 		}else if (OS.contains("Windows XP")) {
 			BACKUP_DIR = HOME+XP_DIR;

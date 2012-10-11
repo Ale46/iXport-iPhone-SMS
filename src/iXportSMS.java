@@ -300,7 +300,7 @@ public class iXportSMS {
 									@Override
 									public void mouseClicked(MouseEvent arg0) {
 										try {
-											openURL("https://twitter.com/#!/Ale467");
+											openURL("https://twitter.com/Ale467");
 										} catch (IOException e) {
 
 											e.printStackTrace();
