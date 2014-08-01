@@ -1,90 +1,36 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title>
-    
-      404: Page not found &middot; iXport iPhone SMS
-    
-  </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/lanyon.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://coindonationwidget.com/widget/coin.js"></script>
-  <!-- dirty animation for the sidebar -->
-  <script type="text/javascript">
-    $( document  ).ready(function() {
-      $('#sidebar-checkbox').attr("checked",true);;
-    });
-  </script>
-</head>
-
-
-  <body class="theme-base-08">
-
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"> 
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <!-- <p></p> -->
+    <!-- <p>{{ site.description }}</p> -->
 
 
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/">Home</a>
+    <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
 
-    
+    {% comment %}
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
 
-    
-    
-      
-        
-      
-    
-      
-    
-      
-        
-          <a class="sidebar-nav-item" href="/download/">Download</a>
-        
-      
-    
-      
-    
-      
-        
-          <a class="sidebar-nav-item" href="/screenshots/">Screenshots</a>
-        
-      
-    
+    {% assign pages_list = site.pages %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if node.layout == "page" or node.layout == "download" %}
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
 
-<!--     <a class="sidebar-nav-item" href="https://github.com/Ale46/iXport-iPhone-SMS/archive/v1.0.0.zip">Download</a> -->
-    <a class="sidebar-nav-item" href="https://github.com/Ale46/iXport-iPhone-SMS">Project @Github</a>
-    <a class="sidebar-nav-item" href="https://ale46.github.io/">Other projects</a>
-    <!-- <span class="sidebar-nav-item">Currently v1.0.0</span> -->
+<!--     <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
+    <a class="sidebar-nav-item" href="{{ site.github.repo }}">Project @Github</a>
+    <a class="sidebar-nav-item" href="{{ site.github.main }}">Other projects</a>
+    <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
   </nav>
 
   <div class="sidebar-item">
@@ -127,34 +73,7 @@
     </form>
   </p>
     <p>
-      &copy; 2014. All rights reserved.
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
     </p>
   </div>
 </div>
-
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <!-- <label for="sidebar-checkbox" class="sidebar-toggle"></label> -->
-
-          <h3 class="masthead-title">
-            <a href="/" title="Home">iXport iPhone SMS</a>
-            <small>A tool for exporting SMS conversation</small>
-          </h3>
-        </div>
-      </div>
-
-      <div class="container content">
-        <div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/">Head back home</a> to try finding it again.</p>
-</div>
-
-      </div>
-    </div>
-
-  </body>
-</html>

@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<h2>Available Downloads:</h2>
+
+{% if site.download.windows != "" %}
+<a href="{{ site.download.windows }}" class="download">
+	<div class="left">
+		<i class="fa fa-arrow-down fa-1x"></i>
+		<i class="fa fa-windows fa-2x"></i>
+	</div>
+	<div class="right">
+		<h5>Download<span>For Windows</span></h5>
+	</div>
+</a>
+{% endif %}
+
+{% if site.download.mac != "" %}
+<a href="{{ site.download.mac }}" class="download">
+	<div class="left">
+		<i class="fa fa-arrow-down fa-1x"></i>
+		<i class="fa fa-apple fa-2x"></i>
+	</div>
+	<div class="right">
+		<h5>Download<span>For mac</span></h5>
+	</div>
+</a>
+{% endif %}
+
+
+{% if site.download.linux != "" %}
+<a href="{{ site.download.linux }}" class="download">
+	<div class="left">
+		<i class="fa fa-arrow-down fa-1x"></i>
+		<i class="fa fa-linux fa-2x"></i>
+	</div>
+	<div class="right">
+		<h5>Download<span>For linux</span></h5>
+	</div>
+</a>
+{% endif %}
+
+{% if site.download.all != "" %}
+<a href="{{ site.download.all }}" class="download">
+	<div class="left">
+		<i class="fa fa-arrow-down fa-1x"></i>
+		<i class="fa fa-cloud fa-2x"></i>
+	</div>
+	<div class="right">
+		<h5>Download<span>For all platform</span></h5>
+	</div>
+</a>
+{% endif %}
+
+
+
